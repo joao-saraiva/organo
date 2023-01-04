@@ -4,7 +4,7 @@ import TextField from "../TextField";
 import DropDown from "../DropDown";
 import SubmitButton from "../SubmitButton";
 
-const Form = () => {
+const Form = (props) => {
   const teams = [
     "Programação",
     "Front-End",
@@ -23,6 +23,7 @@ const Form = () => {
 
   const afterSave = (event) => {
     event.preventDefault();
+    props.onEmployeeRegistered({name, office, image, team});
   }
 
   return (
