@@ -1,6 +1,7 @@
 import "./Form.css";
 import TextField from "../TextField";
 import DropDown from "../DropDown";
+import SubmitButton from "../SubmitButton";
 
 const Form = () => {
   const teams = [
@@ -21,6 +22,9 @@ const Form = () => {
         <TextField label="Cargo" placeholder="Digite seu cargo" />
         <TextField label="Imagem" placeholder="Digite o endereço da imagem" />
         <DropDown itens={teams} label="Time" />
+        <SubmitButton> 
+          Criar Card
+        </SubmitButton>
       </form>
     </section>
   );
