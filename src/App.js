@@ -50,7 +50,10 @@ function App() {
   return (
     <div className="App">
       <Banner />
-      <Form onEmployeeRegistered={onEmployeeRegistered} />
+      <Form
+        teams={teams.map((team) => team.name)}
+        onEmployeeRegistered={onEmployeeRegistered}
+      />
       {teams.map((team) => (
         <Team
           key={team.name}
