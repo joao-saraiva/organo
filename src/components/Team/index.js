@@ -6,8 +6,14 @@ const Team = (props) => {
     <section className="team" style={{ backgroundColor: props.secundaryColor }}>
       <h3 style={{ borderBottomColor: props.primaryColor }}>{props.name}</h3>
       <div className="cardSection">
-        <Employee />
-        <Employee />
+        {props.employees.map((employee) => (
+          <Employee
+            name={employee.name}
+            office={employee.office}
+            image={employee.image}
+            key={employee.name}
+          />
+        ))}
       </div>
     </section>
   );

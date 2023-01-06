@@ -1,14 +1,14 @@
 import "./Employee.css";
 
-const Employee = () => {
+const Employee = ({ name, image, office }) => {
   return (
     <div className="employee">
       <div className="header">
-        <img src="https://github.com/joao-saraiva.png" alt="João Saraiva"></img>
+        <img src={image} alt={name}></img>
       </div>
       <div className="footer">
-        <h4>João</h4>
-        <h5>Programador</h5>
+        <h4>{name}</h4>
+        <h5>{office}</h5>
       </div>
     </div>
   );
