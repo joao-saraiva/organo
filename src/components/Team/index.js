@@ -5,7 +5,10 @@ const Team = (props) => {
   return (
     <section className="team" style={{ backgroundColor: props.secundaryColor }}>
       <h3 style={{ borderBottomColor: props.primaryColor }}>{props.name}</h3>
-      <Employee />
+      <div className="cardSection">
+        <Employee />
+        <Employee />
+      </div>
     </section>
   );
 };
