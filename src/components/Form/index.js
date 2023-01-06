@@ -13,6 +13,10 @@ const Form = (props) => {
   const afterSave = (event) => {
     event.preventDefault();
     props.onEmployeeRegistered({ name, office, image, team });
+    setName("");
+    setOffice("");
+    setImage("");
+    setTeam("");
   };
 
   return (
